@@ -1,13 +1,12 @@
 import { styled } from "@kuma-ui/core";
 
 import { MemoCard } from "@/components/feature/memo-card";
-import { useAppSelector } from "@/libs/redux";
 
-export const Contents = () => {
-	const memos = useAppSelector((state) => state.memo.memos);
+interface Props {
+	memos: Memo[];
+}
 
-	console.log(memos);
-
+export const Contents: React.FC<Props> = ({ memos }) => {
 	if (memos.length === 0) {
 		return (
 			<Container>

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import type { FormState } from "@/components/feature/memo-form/useMemoForm";
 import { useAppDispatch } from "@/libs/redux";

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router-dom";
 
 import type { FormState } from "@/components/feature/memo-form/useMemoForm";
 import { useAppDispatch, useAppSelector } from "@/libs/redux";

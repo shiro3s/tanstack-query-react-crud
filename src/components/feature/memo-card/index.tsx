@@ -1,10 +1,10 @@
 import { styled } from "@kuma-ui/core";
-import { Link } from "react-router";
+import { NavLink } from "react-router-dom";
 
 export const MemoCard: React.FC<Memo> = ({ id, title, content }) => {
 	return (
 		<Container>
-			<Link to={`/edit/${id}`} />
+			<NavLink to={`/edit/${id}`} />
 
 			<Header>
 				<Title>{title}</Title>

@@ -1,0 +1,5 @@
+{
+  "memos": [
+    {"id": "1", "title": "mock", "content": "return mock content"}
+  ]
+}

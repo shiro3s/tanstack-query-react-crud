@@ -1,13 +1,9 @@
-import { styled } from "@kuma-ui/core";
 import { Provider } from "react-redux";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 import { store } from "@/store";
 import { RouterProvider } from "react-router-dom";
-import { routes } from "./routes";
-
-
-const queryClient = new QueryClient();
+import { routes, queryClient } from "./routes";
 
 export const App = () => {
 	return (

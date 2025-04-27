@@ -28,12 +28,20 @@ export const MemoForm: React.FC<Props> = ({
 			<Title>{title}</Title>
 
 			<Field>
-				<InputText placeholder="Title" register={register("title")} />
+				<InputText
+					placeholder="Title"
+					name="title"
+					register={register("title")}
+				/>
 				{!!errors.title && <ErrorMsg>{errors.title.message}</ErrorMsg>}
 			</Field>
 
 			<Field>
-				<Textarea placeholder="Content" register={register("content")} />
+				<Textarea
+					placeholder="Content"
+					name="content"
+					register={register("content")}
+				/>
 			</Field>
 
 			<Action>

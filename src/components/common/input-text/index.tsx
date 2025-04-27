@@ -6,6 +6,7 @@ type Props = Partial<HTMLInputElement> & {
 };
 
 export const InputText: React.FC<Props> = ({
+	name,
 	disabled,
 	id,
 	maxLength,
@@ -21,6 +22,7 @@ export const InputText: React.FC<Props> = ({
 		<Container>
 			<ContainerInner>
 				<Input
+					name={name}
 					type="text"
 					id={id}
 					readOnly={readOnly}

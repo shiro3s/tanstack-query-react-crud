@@ -7,6 +7,7 @@ import { NotFound } from "@/pages/not-found";
 import { Layout } from "@/components/layouts";
 
 import { listsLoader } from "@/pages/memos/lists/loader";
+import { editLoader } from "@/pages/memos/edit/loader";
 
 export const queryClient = new QueryClient();
 
@@ -17,7 +18,7 @@ export const routes = createBrowserRouter([
 		children: [
 			{ index: true, element: <MemoLists />, loader: listsLoader(queryClient) },
 			{ path: "new", element: <CreateMemo /> },
-			{ path: "edit/:id", element: <EditMemo /> },
+			{ path: "edit/:id", element: <EditMemo />, loader: editLoader(queryClient) },
 			{ path: "*", element: <NotFound /> },
 		],
 	},

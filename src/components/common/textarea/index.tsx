@@ -6,6 +6,7 @@ type Props = Partial<HTMLTextAreaElement> & {
 };
 
 export const Textarea: React.FC<Props> = ({
+	name,
 	placeholder,
 	autocomplete,
 	disabled,
@@ -17,6 +18,7 @@ export const Textarea: React.FC<Props> = ({
 	return (
 		<Container>
 			<Input
+				name={name}
 				disabled={disabled}
 				readOnly={readOnly}
 				maxLength={maxLength}

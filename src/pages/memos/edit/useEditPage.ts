@@ -1,29 +1,27 @@
 import { useNavigate, useLoaderData } from "react-router-dom";
 
 import type { FormState } from "@/components/feature/memo-form/useMemoForm";
-import { useAppDispatch } from "@/libs/redux";
-import { deleteMemo, updateMemo } from "@/store/memoStore";
 import type { editLoader } from "./loader";
+import client from "@/utils/axios";
 
 export const useEditPage = () => {
-	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 
 	const { memo } = useLoaderData() as Awaited<
 		ReturnType<ReturnType<typeof editLoader>>
 	>;
 
-	const handleSubmit = (values: FormState) => {
+	const handleSubmit = async (values: FormState) => {
 		if (!memo?.id) return;
 
-		dispatch(updateMemo({ ...values, id: memo.id }));
+		await client.memos.update(memo.id, values)
 		navigate("/");
 	};
 
-	const handleDelete = () => {
+	const handleDelete = async () => {
 		if (!memo?.id) return;
 
-		dispatch(deleteMemo(memo.id));
+		await client.memos.remove(memo.id)
 		navigate("/");
 	};
 

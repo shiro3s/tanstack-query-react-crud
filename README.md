@@ -1,12 +1,12 @@
 # Tanstack Query React CRUD
 
-Simple CRUD Sample with React and Redux
+Simple CRUD Sample with React
 
 ## Libraries
 
 - React
 - TypeScript
-- Redux / Redux Toolkit
 - react-hook-form
+- Tanstack Query
 - Kuma UI
 - Biome

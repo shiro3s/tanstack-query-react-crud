@@ -3,7 +3,8 @@
     "start": "vite",
     "build": "vite build",
     "lint": "biome lint ./src",
-    "lint:fix": "biome check --write ./src"
+    "lint:fix": "biome check --write ./src",
+    "msw": "bunx msw init ./public --no-save"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
@@ -28,6 +29,7 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "msw": "^2.7.5",
     "typescript": "^5.8.2",
     "vite": "^6.2.3"
   }

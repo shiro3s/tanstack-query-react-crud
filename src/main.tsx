@@ -2,7 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./app/App";
+import { setupMsw } from "@/mocks";
 import "normalize.css";
+
+setupMsw();
 
 const root = document.getElementById("root");
 
